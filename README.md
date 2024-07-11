@@ -1,9 +1,10 @@
-# Introdução :page_facing_up:
+# Jogo do número secreto
+## Introdução :page_facing_up:
 Esse projeto foi desenvolvido na formação 'A partir do zero: iniciante em programação' da [Alura](https://www.alura.com.br/) e tem como 
 intuito aplicar a lógica de programação com a linguagem de programação JavaScript, através da criação de um 
 jogo de adivinhação onde o usuário deve tentar acertar o número criado pelo computador.
 
-# Descrição :notebook:
+## Descrição :notebook:
 Complementando o que foi dito anteriormente, a ideia desse projeto é que o computador crie um número pseudoaleatório
 e que o usuário tente acertá-lo com o menor número de tentativas possível, tendo um sistema de feedback que o orientará se o seu chute foi alto ou baixo.
 
@@ -19,11 +20,11 @@ Sobre o intervalo mencionado no parágrafo anterior, ele é utilizado para delim
 no caso desse projeto, de 1 a 100. O número máximo pode ser alterado sem que ocorram problemas ao longo do código, mas caso o número mínimo seja alterado, 
 terá que ser realizado alterações ao longo do código.
 
-# Código :computer:
+## Código :computer:
 Ao abrir o arquivo app.js, você encontrará o código JavaScript utilizado no projeto, ele foi separado em cinco partes, por meio de comentários.
 Cada parte terá as suas informações mais importantes comentadas aqui:
 
-## Declaração de variáveis
+### Declaração de variáveis
 Nessa primeira seção, estão presentes as variáveis globais, como o número limite de valores sorteados(```numeroLimite```), número de tentativas(```tentativas```) e número secreto(```numeroSecreto```).
 Também está contido o vetor que receberá os números já sorteados(```listaDeNumerosSorteados```). Esse bloco de código pode ser melhor visualizado abaixo:
 
@@ -35,7 +36,7 @@ let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 ```
 
-## Funções relacionadas aos textos 
+### Funções relacionadas aos textos 
 A função  ```exibirTextoNaTela()``` é essencial , por pegar uma tag específica passada como parâmetro e um texto para imprimi-los na página. Porém,
 não se recebe nenhuma tag ou texto em si, esses são passados por meio da função ```exibirMensagemInicial()``` e por outras partes do código que irão utilizá-la.
 A função ```exibirMensagemInicial()``` defini os textos iniciais da página. Esse bloco de código pode ser melhor visualizado abaixo:
@@ -55,7 +56,7 @@ function exibirMensagemInicial(){
 exibirMensagemInicial()
 ```
 
-## Função do botão “chutar”
+### Função do botão “chutar”
 aqui é recebido o valor do chute da página HTML por meio de uma variável utilizando o ```document.querySelector('input').value```. Com a variável chute, é possível
 fazer a verificação se o número é menor ou igual a zero usando uma condicional, retornando uma mensagem de erro caso seja verdadeiro e não realizando nada caso seja falso.
 
@@ -109,7 +110,7 @@ function verificarChute(){
 }
 ```
 
-## Função do botão “reiniciar jogo”
+### Função do botão “reiniciar jogo”
 essa função é responsável por criar um novo número secreto por meio da função ```gerarNumeroAleatorio()```, 
 atribuir o valor da variável tentativas para um, limpar o campo de texto por meio da função ```limparCampo()``` e colocar os 
 textos iniciais através da função  ```exibirMensagemInicial()```. Ela também muda o status do botão reiniciar para disabled.
@@ -125,7 +126,7 @@ function reiniciarJogo(){
 }
 ```
 
-## Funções complementares
+### Funções complementares
 Aqui estão contidas as funções responsáveis por limpar o campo de entrada de dados e gerar os números secretos. A função ```limparCampo()``` é bem simples, pois só retira o que foi digitado e coloca um espaço. Já a função ```gerarNumeroAleatorio()``` cria um número 
 pseudoaleatório, utilizando a função math.random() vezes o número limite mais um. 
 
@@ -155,5 +156,5 @@ function gerarNumeroAleatorio() {
 }
 ```
 
-# Site :mag_right:
+## Site :mag_right:
 Esse projeto pode ser melhor visualizado pelo seguinte link: https://jogo-do-numero-secreto-ten-orcin.vercel.app.
